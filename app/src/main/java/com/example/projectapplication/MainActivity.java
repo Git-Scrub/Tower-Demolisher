@@ -13,4 +13,20 @@ public class MainActivity extends Activity {
         this.glSurfaceView = new MainGLSurfaceView(this);
         setContentView(this.glSurfaceView);
     }
+
+    @Override
+    protected void onPause()
+    {
+        // Call default Activity's onPause
+        super.onPause();
+        // gl's onPause method
+        glSurfaceView.onPause();
+    }
+
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+        glSurfaceView.onResume();
+    }
 }

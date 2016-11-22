@@ -11,7 +11,7 @@ import java.nio.FloatBuffer;
 /**
  * Created by Lionel on 11/4/2016.
  */
-public class Triangle {
+public class Triangle extends GameObject {
     private FloatBuffer vertexBuffer;
     private final int openGLESProgram;
 
