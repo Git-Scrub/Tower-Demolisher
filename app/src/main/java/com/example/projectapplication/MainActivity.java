@@ -11,7 +11,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.glSurfaceView = new MainGLSurfaceView(this);
-        setContentView(this.glSurfaceView);
+        this.glSurfaceView.setRenderer(new MainGLRenderer(this));
+        this.setContentView(this.glSurfaceView);
     }
 
     @Override
